@@ -1,0 +1,179 @@
+﻿MINGO ,,,,,,,,,,ERP,,,,,,
+,,,,,,,,,,,,,,,,
+Databases,,,,,,,,,,Databases,,,,,,
+Cafe,,,,,,,,,,ai,,,,,,
+datamingo_member,table 존재 x,,,,,,,,,erd,,,,,,
+member,table 존재 x,,,,,,,,,sys,,,,,,
+sys,,,,,,,,,,,,,,,,
+tax,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,
+DB:Café ,,,,DB:tax,,,,,,DB:ai ,,,,DB:erd,,
+tables,columns,types,,tables,columns,types,,,,tables,columns,types,,tables,columns,types
+manager,manager_index,smallint(6),,every_member,every_member_number,int(11),,,,ad,ad_pk,int(11),,client,client_index,int(11)
+,manager_id,varchar(20),,,every_member_birth,datetime,,,,,user_id,varchar(20),,,client_place,int(11)
+,manager_pw,varchar(20),,,every_member_title,int(11),,,,,target_sex,varchar(10),,,client_name,varchar(20)
+,manager_code, varchar(11),,,every_member_level,int(11),,,,,target_age,int(11),,,client_phone,varchar(20)
+,manager_name,varchar(20),,,every_member_status,varchar(50),,,,,ad_audio,varchar(100),,member,number,int(11)
+,manager_date,timestamp,,,every_member_reason,varchar(50),,,,,ad_title,varchar(100),,,member_id,varchar(50)
+,point_ratio,int(11),,,every_member_join,datetime,,,,,ad_body,varchar(200),,,member_name,varchar(50)
+,coupon_ratio,int(11),,,every_member_quit,varchar(50),,,,,ad_img,varchar(20),,,member_password,varchar(50)
+,coupon_exchange,int(11),,,1977-01 ~ 2019-07,int(11),,,,age,age_index,int(11),,,member_admin,tinyint(4)
+,menu_version,int(11),,output1_1안_개정수입금예상액,구분,varchar(50),,,,,user_id,varchar(20),,,date,timestamp
+member,number,int(11)  ,,,상조금,varchar(50),,,,,age_age,tinyint(10),,product,product_index,int(11)
+,manager_index,int(11)  ,,,임대수익,varchar(50),,,,,age_gender,varchar(20),,,product_deleted,tinyint(4)
+,member_id, varchar(50),,,합계,varchar(50),,,,,age_time,timestamp,,,product_owner,varchar(20)
+,member_name, varchar(50),,output1_1안_현행수입금예상 ,연도,varchar(50),,,,,age_img,text,,,product_number,int(11)
+,member_password, varchar(50),,,상조금,varchar(50),,,,avgAGE,avgAGE_index,int(11),,,product_name,varchar(100)
+,date,timestamp,,,임대수익,varchar(50),,,,,700,float,,,product_price,int(11)
+,member_admin,tinyint(4),,,합계,varchar(50),,,,,720,float,,,product_actual_price,int(11)
+,point, int(11)  ,,output1_1안_현행퇴직부조금예상,연도,int(11),,,,,740,float,,,product_count,int(11)
+,coupon, int(11)  ,,,정년인원,int(11),,,,,800,float,,,product_purchase_count,int(11)
+,manager_name,varchar(20),,,정년금액,"decimal(28,10)",,,,,820,float,,,product_profit,int(11)
+menu,menu_pk,int(11) ,,,명예인원,int(11),,,,,840,float,,,product_purchase_date,datetime
+,manager_id,varchar(20),,,명예금액,"decimal(28,10)",,,,,900,float,,,product_start_date,datetime
+,menu_version,int(11) ,,,기타인원,int(11),,,,avgGENDER,avgGENDER_index,int(11),,,product_end_date,datetime
+,menu_index,int(11) ,,,기타금액,"decimal(28,10)",,,,,700,float,,,product_business_days,int(11)
+,menu_deleted,int(11) ,,,지급예상인원,int(11),,,,,720,float,,,product_sales_period,int(11)
+,menu_name,varchar(20),,,A퇴직부조금예상액,"decimal(28,10)",,,,,740,float,,,product_stock_period,int(11)
+,menu_price,int(11),,,수지,varchar(50),,,,,800,float,,,product_reorder_date,datetime
+,menu_timestamp,timestamp,,,누적액,varchar(50),,,,,820,float,,,product_date,timestamp
+order_detail,order_detail_number,int(11),,output1_2안_개정수입금예상액,구분,varchar(50),,,,,840,float,,purchase,purchase_index,int(11)
+,order_index,int(11),,,상조금,varchar(50),,,,,900,float,,,purchase_deleted,tinyint(4)
+,order_menu,int(11),,,임대수익,varchar(50),,,,client,client_index,int(11),,,purchase_owner,varchar(20)
+,order_count,int(11),,,합계,varchar(50),,,,,client_place,int(11),,,purchase_product_number,int(11)
+order_detail2,order_detail_number,int(11),,output1_2안_현행수입금예상 ,구분,varchar(50),,,,,client_name,varchar(20),,,purchase_product_name,varchar(40)
+,order_index,int(11),,,상조금,varchar(50),,,,,client_phone,varchar(20),,,purchase_product_actual_price,int(11)
+,order_menu,int(11),,,임대수익,varchar(50),,,,ddp_client,client_index,int(11),,,purchase_amount,int(11)
+,order_count,int(11),,,합계,varchar(50),,,,,client_place,int(11),,,purchase_date,datetime
+order_list,order_index,int(11)  ,, output1_2안_현행퇴직부조금예상,연도,int(11),,,,,client_name,varchar(20),,sales,sales_index,int(11)
+,order_manager,varchar(20),,,정년인원,int(11),,,,,client_phone,varchar(20),,,sales_deleted,tinyint(4)
+,order_number,int(11)  ,,,정년금액,"decimal(28,10)",,,,emo,emo_index,int(11),,,sales_owner,varchar(20)
+,order_date,timestamp,,,명예인원,int(11),,,,,user_id,varchar(20),,,sales_product_number,int(11)
+,order_owner,varchar(20),,,명예금액,"decimal(28,10)",,,,,emo_label,varchar(20),,,sales_product_name,varchar(40)
+,on_review_list,tinyint(4),,,기타인원,int(11),,,,,emo_prob,"decimal(10,6)",,,sales_product_price,int(11)
+,review_status,tinyint(4),,,기타금액,"decimal(28,10)",,,,,emo_time,timestamp,,,sales_amount,int(11)
+,review_score,int(11)  ,,,지급예상인원,int(11),,,,,emo_img,text,,,sales_date,datetime
+,total_price,int(20),,,A퇴직부조금예상액,"decimal(28,10)",,,,users,user_pk,int(11),,,,
+order_menu,order_menu,int(11),,,수지,varchar(50),,,,,user_id,varchar(20),,,,
+,order_menu_name,varchar(100),,,누적액,varchar(50),,,,,user_pw,varchar(20),,,,
+,order_value,int(11),, output1_3안_개정수입금예상액,구분,varchar(50),,,,,user_key,varchar(20),,,,
+order_menu2,order_menu,int(11),,,상조금,varchar(50),,,,,user_name,varchar(20),,,,
+,order_menu_name,varchar(100),,,임대수익,varchar(50),,,,,ad_switch,tinyint(4),,,,
+,order_value,int(11),,,합계,varchar(50),,,,,,,,,,
+order_month,order_pk,smallint(4),,output1_3안_현행수입금예상 ,구분,varchar(50),,,,,,,,,,
+,manager_id, varchar(15),,,상조금,varchar(50),,,,,,,,,,
+,order_date,timestamp ,,,임대수익,varchar(50),,,,,,,,,,
+,order_number,int(11),,,합계,varchar(50),,,,,,,,,,
+,user_id,varchar(15),,output1_3안_현행퇴직부조금예상,구분,varchar(50),,,,,,,,,,
+,review_score,int(11),,,청년인원,varchar(50),,,,,,,,,,
+,order_price,int(10),,,청년금액,varchar(50),,,,,,,,,,
+,review_on,int(11),,,명예인원,varchar(50),,,,,,,,,,
+,menu_version,int(11),,,명예금액,varchar(50),,,,,,,,,,
+,process_date,datetime,,,기타인원,varchar(50),,,,,,,,,,
+order_month_product,order_product_pk,int(11),,,기타금액,varchar(50),,,,,,,,,,
+,order_pk,int(11),,,지급예상인원,varchar(50),,,,,,,,,,
+,menu_pk,int(11),,,퇴직부조금예상액,varchar(50),,,,,,,,,,
+,product_count,int(11),,output1_복리이자,퇴직종류,varchar(50),,,,,,,,,,
+order_numbering,order_numbering_index,int(11),,,날짜,varchar(50),,,,,,,,,,
+,order_numbering_owner,varchar(20),,,납입금,varchar(50),,,,,,,,,,
+,order_numbering_owner_index,int(11),,,이율,varchar(50),,,,,,,,,,
+,order_numbering_count,int(11),,,원리금,varchar(50),,,,,,,,,,
+,order_numbering_date,timestamp ,,,원금누계,varchar(50),,,,,,,,,,
+order_today,order_pk,smallint(4),,,이자,varchar(50),,,,,,,,,,
+,manager_id,varchar(15),,output1_자기납부액,연도,varchar(50),,,,,,,,,,
+,order_date,timestamp,,,평균봉급7급21호봉,varchar(50),,,,,,,,,,
+,order_number,int(11) ,,,징수율,varchar(50),,,,,,,,,,
+,user_id,varchar(15),,,평균납부금액,varchar(50),,,,,,,,,,
+,review_on, tinyint(1),,,정년기간평균,varchar(50),,,,,,,,,,
+,order_price,int(10) ,,,명예기간평균,varchar(50),,,,,,,,,,
+order_today_product,order_product_pk,int(11),,,기타기간평균,varchar(50),,,,,,,,,,
+,order_pk,int(11),,output1_지급개정안,기준년월,varchar(50),,,,,,,,,,
+,menu_pk,int(11),,,개정안1-1,varchar(50),,,,,,,,,,
+,product_count,int(11),,,개정안1-2,varchar(50),,,,,,,,,,
+point,log_pk,int(11),,,개정안2-1,varchar(50),,,,,,,,,,
+,manager_id,varchar(20),,,개정안2-2,varchar(50),,,,,,,,,,
+,user_id,varchar(20),,,개정안3-1,varchar(50),,,,,,,,,,
+,order_pk,int(11),,,개정안3-2,varchar(50),,,,,,,,,,
+,point_type,varchar(11),,output1_참조변수,년도,varchar(50),,,,,,,,,,
+,point_met,varchar(11),,,금리,varchar(50),,,,,,,,,,
+,point_amt,int(11),,,가산이율,varchar(50),,,,,,,,,,
+,user_point,int(11),,,개정금리,varchar(50),,,,,,,,,,
+,user_coupon,int(11),,output1_평균추정치징수,년도,varchar(50),,,,,,,,,,
+,process_date,datetime ,,,가입인원,varchar(50),,,,,,,,,,
+product,product_index,int(11),,,퇴직인원,varchar(50),,,,,,,,,,
+,product_deleted,tinyint(4),,,기존납입인원,varchar(50),,,,,,,,,,
+,product_owner,varchar(20),,,퇴직인원제외납입인원,varchar(50),,,,,,,,,,
+,product_number,int(11),,,평균월급여_8급28호봉,varchar(50),,,,,,,,,,
+,product_name,varchar(100),,,봉급인상률,varchar(50),,,,,,,,,,
+,product_price, int(11),,,현행징수율,varchar(50),,,,,,,,,,
+,product_actual_price, int(11),,,전체연징수금액8급23호봉,varchar(50),,,,,,,,,,
+,product_count, int(11),,,전체징수금액변동률,varchar(50),,,,,,,,,,
+,product_purchase_count, int(11),,output1_평균추정치현행지급,연도,varchar(50),,,,,,,,,,
+,product_profit, int(11),,,퇴직인원,varchar(50),,,,,,,,,,
+,product_purchase_date,datetime,,,정년퇴직인원,varchar(50),,,,,,,,,,
+,product_start_date,datetime,,,명예퇴직인원,varchar(50),,,,,,,,,,
+,product_end_date,datetime,,,기타퇴직인원,varchar(50),,,,,,,,,,
+,product_business_days, int(11),,,퇴직가산금평균봉급6급8호봉,varchar(50),,,,,,,,,,
+,product_sales_period, int(11),,,평균표준금액,varchar(50),,,,,,,,,,
+,product_stock_period, int(11),,,정년평균납부년수,varchar(50),,,,,,,,,,
+,product_reorder_date,datetime ,,,명예평균납입년수,varchar(50),,,,,,,,,,
+,product_date,timestamp,,,기타평균납입년수,varchar(50),,,,,,,,,,
+purchase,purchase_index, int(11),,,자기납부액시트참조,varchar(50),,,,,,,,,,
+,purchase_deleted,tinyint(4),,,정년자기납부액,varchar(50),,,,,,,,,,
+,purchase_owner,varchar(20),,,명예자기납부액,varchar(50),,,,,,,,,,
+,purchase_product_number,int(11) ,,,기타자기납부액,varchar(50),,,,,,,,,,
+,purchase_product_name,varchar(40),,,퇴직가산금,bigint(20),,,,,,,,,,
+,purchase_product_actual_price,int(11),,,정년퇴직가산금,"decimal(28,0)",,,,,,,,,,
+,purchase_amount,int(11),,,명예퇴직가산금,"decimal(28,0)",,,,,,,,,,
+,purchase_date,datetime,,,기타퇴직가산금,bigint(20),,,,,,,,,,
+sales,sales_index,int(11),,,퇴직부조금,varchar(50),,,,,,,,,,
+,sales_deleted,tinyint(4),,output1_output참조변수,년도,varchar(50),,,,,,,,,,
+,sales_owner,varchar(20),,,복리by상조금,varchar(50),,,,,,,,,,
+,sales_product_number,int(11) ,,,복리증가율봉급호봉,varchar(50),,,,,,,,,,
+,sales_product_name, varchar(40),,,상조금,varchar(50),,,,,,,,,,
+,sales_product_price,int(11),,,봉급,varchar(50),,,,,,,,,,
+,sales_amount,int(11),,,임대수익,varchar(50),,,,,,,,,,
+,sales_date,datetime,,,상조금수익,varchar(50),,,,,,,,,,
+user,user_pk,int(11),,,봉급호봉포함증가율,varchar(50),,,,,,,,,,
+,manager_id, varchar(11),,,년도별조정치,varchar(50),,,,,,,,,,
+,user_id, varchar(50),,,숨김,varchar(50),,,,,,,,,,
+,user_name, varchar(50),,output2_개인정보변동 ,고유번호,varchar(50),,,,,,,,,,
+,user_pw, varchar(50),,,봉급액,varchar(50),,,,,,,,,,
+,join_date,timestamp,,,정년퇴직년,varchar(50),,,,,,,,,,
+,user_point,int(11),,,정년퇴직월,varchar(50),,,,,,,,,,
+,user_coupon,int(11),,,정년퇴직일,varchar(50),,,,,,,,,,
+,,,,,납입300회년,varchar(50),,,,,,,,,,
+,,,,,납입300회월,varchar(50),,,,,,,,,,
+,,,,,납입300회일,varchar(50),,,,,,,,,,
+,,,,,300회시점금액,varchar(50),,,,,,,,,,
+,,,,output2_개인정보현행,고유번호,varchar(50),,,,,,,,,,
+,,,,,봉급액,varchar(50),,,,,,,,,,
+,,,,,정년퇴직년,varchar(50),,,,,,,,,,
+,,,,,정년퇴직월,varchar(50),,,,,,,,,,
+,,,,,정년퇴직일,varchar(50),,,,,,,,,,
+,,,,,납입300회년,varchar(50),,,,,,,,,,
+,,,,,납입300회월,varchar(50),,,,,,,,,,
+,,,,,납입300회일,varchar(50),,,,,,,,,,
+,,,,,300회시점금액,varchar(50),,,,,,,,,,
+,,,,output2_참조변수 ,고유번호,varchar(50),,,,,,,,,,
+,,,,,봉급액,varchar(50),,,,,,,,,,
+,,,,,정년퇴직년,varchar(50),,,,,,,,,,
+,,,,,정년퇴직월,varchar(50),,,,,,,,,,
+,,,,,정년퇴직일,varchar(50),,,,,,,,,,
+,,,,,납입300회년,varchar(50),,,,,,,,,,
+,,,,,납입300회월,varchar(50),,,,,,,,,,
+,,,,,납입300회일,varchar(50),,,,,,,,,,
+,,,,,300회시점금액,varchar(50),,,,,,,,,,
+,,,,output2_현재회원상조금300,고유번호,varchar(50),,,,,,,,,,
+,,,,,날짜,varchar(50),,,,,,,,,,
+,,,,,비율,varchar(50),,,,,,,,,,
+,,,,,상조금,varchar(50),,,,,,,,,,
+,,,,output2_현재회원상조금변동,고유번호,varchar(50),,,,,,,,,,
+,,,,,날짜,varchar(50),,,,,,,,,,
+,,,,,비율,varchar(50),,,,,,,,,,
+,,,,,상조금,varchar(50),,,,,,,,,,
+,,,,output2_현재회원상조금변동300,고유번호,varchar(50),,,,,,,,,,
+,,,,,날짜,varchar(50),,,,,,,,,,
+,,,,,비율,varchar(50),,,,,,,,,,
+,,,,,상조금,varchar(50),,,,,,,,,,

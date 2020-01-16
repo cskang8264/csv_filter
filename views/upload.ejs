@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>발주예측시스템</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+    </style>
+
+
+</head>
+
+<nav class="navbar navbar-default" style="background-color: #e3f2fd;">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://admin.datamingo.net">MINGO ADMIN</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+            <ul class="nav navbar-nav navbar-right ">
+                <li><a href="/logout">LOGOUT</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</nav>
+
+<body>
+
+    <div class="container">
+        <BR><BR>
+        <p class="lead">재고 및 매출 데이터를 통해 발주 시점을 예측하는 어플리케이션입니다.</p>
+        <hr class="my-4">
+
+        <H3>🅐 CSV파일(상품,매입,매출) 등록 - 🅑 발주 예측 순으로 진행해주십시오.</H3>
+        <BR>
+
+        <H4>상품이 등록되어 있지 않으면, 먼저 상품을 등록해야 합니다.</H4>
+        <H5>상품은 1회만 입력하면 됩니다. 동일한 상품이 있다면, 업로드 파일을 기준으로 업데이트됩니다.</H5>
+        <p class="lead">
+            <h2> 🅐 CSV파일(상품,매입,매출) 등록</h2>
+            <form action="upload"  enctype="multipart/form-data" method="POST">
+                <h4>상품, 매입, 매출 파일을 선택해주세요: </h4>
+                <br>
+               <H4>상품을 등록해야 합니다. </H4> 
+               <H5> <input type="file" name="files" multiple></H5>
+               <H4>등록된 상품에 재고를 추가합니다.</H4>
+               <H5> <input type="file" name="files" multiple></H5>
+               <H4>매출을 등록합니다.</H4>
+               <H5> <input type="file" name="files" multiple></H5>
+                
+
+
+        </p>
+            <br>
+            <input type="submit" class="btn btn-primary btn-lg" value="Upload" tabindex="1">
+            </form>
+            <BR>
+
+            <H4>입력한 데이터를 토대로 발주를 예측합니다.</H4>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="/ruby/expect" role="button">🅓 발주 예측</a>
+            </p>
+
+    </div>
+</body>
