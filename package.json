@@ -17,7 +17,7 @@
     "detect-character-encoding": "^0.8.0",
     "ejs": "~2.6.1",
     "express": "4.16.4",
-    "fast-csv": "^4.0.2",
+    "fast-csv": "^4.3.6",
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "http-errors": "~1.6.3",
